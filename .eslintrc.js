@@ -12,6 +12,8 @@ module.exports = {
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     quotes: "off",
     semi: "off",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "space-before-function-paren": "off",
+    "vue/no-deprecated-slot-attribute": "off"
   }
 };
