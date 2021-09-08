@@ -24,15 +24,21 @@
         <template #icon>
           <i class="iconfont icon-wode"></i>
         </template>
-        <span class="text">我的</span>
+        <span class="text">{{user?'我的':'未登录'}}</span>
       </van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "Home",
+  computed: {
+    ...mapState({
+      user: "user",
+    }),
+  },
   components: {},
 };
 </script>

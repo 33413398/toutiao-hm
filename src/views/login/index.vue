@@ -82,7 +82,7 @@ export default {
       });
       try {
         const { data } = await login(this.user);
-        this.$store.commit("setUser", data.data);
+        this.$store.commit("setUser", data);
         this.$toast.success("登录成功");
         this.$router.push("/");
       } catch (error) {
