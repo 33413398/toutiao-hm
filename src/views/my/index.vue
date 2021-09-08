@@ -82,7 +82,16 @@ export default {
   },
   methods: {
     outLogin() {
-      this.$store.commit("setUser", null);
+      this.$dialog
+        .confirm({
+          title: "退出登录",
+        })
+        .then(() => {
+          this.$store.commit("setUser", null);
+        })
+        .catch(() => {
+          // on cancel
+        });
     },
     async getUserInfoHandle() {
       if (!this.user) return;
